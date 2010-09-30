@@ -6,7 +6,7 @@ module JsonSchemaValidator
 end
 
 class Hash
-  # reqs = [['requirements.drivers_license.types', {:class_name => Integer, :in => (1..15).to_a, :format => //, :required => boolean}]]
+  # reqs = [['requirements.drivers_license.types', {:type => Integer, :in => (1..15).to_a, :format => //, :required => boolean}]]
   # {:requirements => {:drivers_license => {:types => 1}}}.valid?(reqs)
   def valid?(requirements)
     valid = false
@@ -14,7 +14,6 @@ class Hash
     valid
   end
 
-  # add :required
   def key_valid?(string_or_array, options={})
     options = {:required => false}.merge(options)
     
@@ -31,6 +30,6 @@ class Hash
     return options[:in].include?(self[key]) if options[:in]
     return self[key] =~ options[:format]    if options[:format]
 
-    self[key].is_a?(options[:class_name])
+    self[key].is_a?(options[:type])
   end
 end
