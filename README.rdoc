@@ -1,6 +1,6 @@
 = json-schema-validator
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/pederbl/json-schema-validator
 
 == DESCRIPTION:
 
@@ -23,6 +23,8 @@ FIX (describe your package)
 * FIX (sudo gem install, anything else)
 
 == LICENSE:
+
+Creator: Oleg Keene <ol.keene@gmail.com>
 
 (The MIT License)
 

@@ -5,6 +5,8 @@ module JsonSchemaValidator
   VERSION = '0.0.1'
 end
 
+require 'json-schema-validator/core_ext'
+
 class Hash
   # reqs = [['requirements.drivers_license.types', {:type => Integer, :in => (1..15).to_a, :format => //, :required => boolean}]]
   # {:requirements => {:drivers_license => {:types => 1}}}.valid?(reqs)
@@ -31,5 +33,6 @@ class Hash
     return self[key] =~ options[:format]    if options[:format]
 
     self[key].is_a?(options[:type])
+    #array check
   end
 end

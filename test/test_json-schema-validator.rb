@@ -4,6 +4,7 @@ class TestJsonSchemaValidator < Test::Unit::TestCase
   def setup
     @int_json_hash = {:requirements => {:drivers_license => {:types => 1}}}
     @str_json_hash = {:requirements => {:drivers_license => {:types => 'foo'}}}
+    @arr_json_hash = {:requirements => [{:drivers_license => {:types => 1}}, {:drivers_license => {:types => 2}}]}
   end
   
   def test_class_name
