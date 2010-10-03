@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{json-schema-validator}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Oleg Keene"]
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{FIX (describe your package)}
   s.email = ["ol.keene@gmail.com"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt"]
-  s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/json-schema-validator.rb", "lib/json-schema-validator/core_ext.rb", "test/test_helper.rb", "test/test_json-schema-validator.rb"]
+  s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/json-schema-validator.rb", "test/test_helper.rb", "test/test_json-schema-validator.rb"]
   s.homepage = %q{http://github.com/pederbl/json-schema-validator}
   s.post_install_message = %q{PostInstall.txt}
   s.rdoc_options = ["--main", "README.rdoc"]
