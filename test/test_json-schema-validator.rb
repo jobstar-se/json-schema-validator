@@ -32,10 +32,13 @@ class TestJsonSchemaValidator < Test::Unit::TestCase
   end
 
   def test_required
-    reqs = [['requirements.drivers_license.wrong_types', {:type => String}]]
+    reqs = [['requirements.driver_license.wrong_types', {:type => String}]]
     assert @str_json_hash.valid?(reqs)
 
-    reqs = [['foo_requirements.drivers_license.types', {:type => String, :required => true}]]
+    reqs = [['requirements.driver_license.wrong_types', {:type => String, :required => true}]]
+    assert !@str_json_hash.valid?(reqs)
+
+    reqs = [['requirements.driver_license.types', {:type => String, :required => true}]]
     assert !@str_json_hash.valid?(reqs)
   end
 

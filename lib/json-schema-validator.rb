@@ -19,7 +19,6 @@ class Hash
   # reqs = [['requirements.drivers_license.types', {:type => Integer, :in => (1..15).to_a, :format => //, :required => boolean, :if => [['present?(requirements.drivers_license.types)', {any_conditions}]}]]
   # {:requirements => {:drivers_license => {:types => 1}}}.valid?(reqs)
   def valid?(requirements)
-    {:requirements=>{:drivers_license=>{:types=>"foo"}}}.recursive_symbolize_keys! # prepare
     recursive_symbolize_keys! # prepare
     
     valid = false
